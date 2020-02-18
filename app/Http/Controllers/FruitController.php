@@ -65,7 +65,8 @@ class FruitController extends Controller
      */
     public function edit($id)
     {
-        //
+        $fruit = Fruit::find($id);
+        return view('edit',['fruit' => $fruit]);
     }
 
     /**
@@ -75,9 +76,11 @@ class FruitController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Fruit $fruit)
     {
-        //
+        $form_data = $request->all();
+        $fruit->update($form_data);
+        return redirect()->route('fruits.index');
     }
 
     /**
