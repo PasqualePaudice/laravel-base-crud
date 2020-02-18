@@ -17,14 +17,14 @@
                 @method('PUT')
                     <div class="form-group">
                         <label for="nome" class=" mt-2 col-sm-4 col-sm-offset-4">nome</label>
-                        <input type="text" name="nome" placeholder="{{$fruit->nome}}" class="col-sm-4 col-sm-offset-4">
+                        <input type="text" name="nome" placeholder="{{$fruit->nome}}" class="col-sm-4 col-sm-offset-4" required>
                     </div>
 
 
 
                     <div class="form-group">
                         <label for="nome" class="mt-2 col-sm-4 col-sm-offset-4">peso</label>
-                        <input type="text" name="peso" placeholder="{{$fruit->peso}}" class="col-sm-4 col-sm-offset-4">
+                        <input type="text" name="peso" placeholder="{{$fruit->peso}}" class="col-sm-4 col-sm-offset-4" required>
                     </div>
 
 

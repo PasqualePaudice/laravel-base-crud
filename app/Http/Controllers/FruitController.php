@@ -52,9 +52,9 @@ class FruitController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Fruit $fruit)
     {
-        //
+        return view('show',['fruit'=>$fruit]);
     }
 
     /**
@@ -89,8 +89,9 @@ class FruitController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Fruit $fruit)
     {
-        //
+        $fruit->delete();
+        return redirect()->route('fruits.index');
     }
 }
